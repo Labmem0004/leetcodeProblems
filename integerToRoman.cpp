@@ -36,6 +36,10 @@ public:
                 num = rem;
             }
         }
+        else if (num >= 400) {
+            s.append("CD");
+            num -= 400;
+        }
         else if (num >= 100) {
             rem = num % 100;
             indice = (num - rem) / 100;
@@ -57,6 +61,10 @@ public:
                 s.append(indice, 'X');
                 num = rem;
             }
+        }
+        else if (num >= 40) {
+            s.append("XL");
+            num -= 40;
         }
         else if (num >= 10) {
             rem = num % 10;
