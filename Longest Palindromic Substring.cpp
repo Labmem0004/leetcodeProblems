@@ -5,9 +5,15 @@ using namespace std;
 class Solution {
 public:
     string longestPalindrome(string s) {
+        if (s.length() == 1) {
+            return s;
+        }
+
+        
         int size = s.size();
         Palindrome = s[0];
 
+        /*
         //奇数字符回文判断
         for (size_t i = 1; i < size - 1; i++) {
             temp.clear();
@@ -50,6 +56,7 @@ public:
                 }
             }
         }
+        */
 
         return Palindrome;
     }
@@ -57,4 +64,11 @@ public:
 private:
     string Palindrome;   //储存最长回文
     string temp;   //临时储存容器
+
+    int length(string s, int start) {
+        for (size_t i = 0; i < s.length(); i++) {
+            
+        }
+
+    }
 };
